@@ -6,7 +6,7 @@
 
 1. 本地修改、运行、试玩满意；按本轮改动需要自行决定是否运行开发测试。
 2. 只提交本次想上线的文件，提交并推送游戏仓库的 `main`。包含 Codex 协助修改的提交追加 `Co-authored-by: Codex <noreply@openai.com>`。
-3. 打开 [仓库 Actions](https://github.com/FlyingPan635/minecraftby6.1sol/actions)，选择 **Deploy game**，打开最新运行。绿色表示完成；每个步骤可以展开查看日志。若显示 main 已前进而跳过，查看更新的运行。
+3. 打开 [仓库 Actions](https://github.com/realnandsky/minecraftby6.1sol/actions)，选择 **Deploy game**，打开最新运行。绿色表示完成；每个步骤可以展开查看日志。若显示 main 已前进而跳过，查看更新的运行。
 4. 打开游戏刷新检查。线上 `/release.json` 记录当前提交 SHA、运行序号和重试次数。
 
 main 推送或手动重发使用 Node.js 22，执行 `npm ci` 和 `npm run build -- --base=./`，不运行游戏测试，也不提供在线测试选项。游戏测试全部由开发者在本地按需要运行：`npm test`（现有 36 项）。仅打包构建后的 `dist`；相对 base 同时兼容原本的本地试玩和线上游戏子路径。
